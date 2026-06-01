@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+torch
+openai
+python-dotenv
+xgboost
+lightgbm

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 기반 전국 교량 노후도 및 안전점검 우선순위 분석</title>
+  <style>
+    :root { color-scheme: light; --navy:#17324d; --blue:#2f6f9f; --line:#dbe5ee; --bg:#f4f7fa; --text:#243443; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Arial, "Malgun Gothic", sans-serif; color:var(--text); background:var(--bg); line-height:1.7; }
+    header { padding:56px 20px 46px; color:white; background:linear-gradient(135deg, var(--navy), var(--blue)); }
+    header div, main { max-width:980px; margin:auto; }
+    h1 { margin:0 0 12px; font-size:2rem; }
+    h2 { margin-top:0; color:var(--navy); font-size:1.25rem; }
+    main { padding:28px 20px 48px; }
+    section { margin:18px 0; padding:24px; border:1px solid var(--line); border-radius:12px; background:white; box-shadow:0 4px 14px rgba(23,50,77,.05); }
+    .notice { border-left:5px solid #e09b31; background:#fff9ec; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; }
+    .tags li { padding:5px 10px; border-radius:16px; background:#eaf2f8; color:var(--navy); font-size:.9rem; }
+    a { color:#14689c; }
+    footer { padding:22px; text-align:center; color:#617384; font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <header><div>
+    <h1>AI 기반 전국 교량 노후도 및 안전점검 우선순위 분석</h1>
+    <p>전국 교량 공개 데이터를 활용한 머신러닝·딥러닝 포트폴리오 프로젝트</p>
+  </div></header>
+  <main>
+    <section class="notice">
+      <strong>안내</strong>
+      <p>본 분석은 공개 데이터 기반의 점검 우선순위 후보 분석이며, 실제 교량 안전진단을 대체하지 않는다.</p>
+    </section>
+    <section>
+      <h2>프로젝트 개요</h2>
+      <p>국토교통부 전국교량표준데이터를 기반으로 교량의 노후도, 점검 이력, 구조 특성, 내진 관련 정보를 정리하고 점검 우선순위 후보를 분석했다. 규칙 기반 라벨을 분류 모델로 비교하고 AutoEncoder로 일반적인 패턴에서 벗어나는 후보를 탐색했다.</p>
+    </section>
+    <section>
+      <h2>사용 기술</h2>
+      <ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Scikit-learn</li><li>PyTorch</li><li>XGBoost</li><li>LightGBM</li><li>GitHub Actions</li><li>GitHub Pages</li></ul>
+    </section>
+    <section>
+      <h2>분석 모델</h2>
+      <ul><li>Logistic Regression</li><li>RandomForest</li><li>XGBoost</li><li>LightGBM</li><li>Tabular MLP</li><li>AutoEncoder 이상치 탐지</li></ul>
+    </section>
+    <section>
+      <h2>주요 결과 파일</h2>
+      <ul>
+        <li><a href="https://github.com/kim-119/ML-DL/blob/main/outputs/portfolio_model_table.md">outputs/portfolio_model_table.md</a></li>
+        <li><a href="https://github.com/kim-119/ML-DL/blob/main/outputs/model_metrics.csv">outputs/model_metrics.csv</a></li>
+        <li><a href="https://github.com/kim-119/ML-DL/blob/main/outputs/analysis_summary.md">outputs/analysis_summary.md</a></li>
+        <li><a href="https://github.com/kim-119/ML-DL/blob/main/outputs/openai_report_examples.md">outputs/openai_report_examples.md</a></li>
+        <li><a href="https://github.com/kim-119/ML-DL/tree/main/outputs/figures">outputs/figures/</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>한계점</h2>
+      <p><code>priority_score</code>와 <code>target_priority</code>는 분석 목적의 보조 지표다. 실제 구조 안전성 판단에는 전문 진단 데이터, 현장 점검, 구조해석 정보가 필요하다. 모델 성능은 실제 위험 예측력이 아니라 규칙 기반 라벨 재현 성능으로 해석해야 한다.</p>
+    </section>
+    <section>
+      <h2>저장소</h2>
+      <p><a href="https://github.com/kim-119/ML-DL">GitHub Repository: kim-119/ML-DL</a></p>
+    </section>
+  </main>
+  <footer>AI 기반 전국 교량 노후도 및 안전점검 우선순위 분석</footer>
+</body>
+</html>
+

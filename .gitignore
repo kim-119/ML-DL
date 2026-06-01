@@ -1,0 +1,57 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.secret
+openai_api_key.txt
+notion_token.txt
+github_token.txt
+public_data_api_key.txt
+*openai*key*.txt
+*notion*token*.txt
+*github*token*.txt
+*service*key*.txt
+*공공데이터*서비스키*.txt
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Raw data: keep documentation only
+data/*.csv
+data/*.xlsx
+data/*.xls
+!data/README.md
+
+# Trained model artifacts
+models/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Temporary files
+tmp/
+temp/

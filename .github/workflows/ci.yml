@@ -1,0 +1,35 @@
+name: CI - Validate ML/DL Portfolio Project
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: List repository files
+        run: find . -maxdepth 4 -type f | sort
+
+      - name: Compile analysis script when present
+        run: |
+          if [ -f bridge_ai_analysis.py ]; then
+            python -m py_compile bridge_ai_analysis.py
+          fi
+
+      - name: Compile validation script
+        run: python -m py_compile scripts/validate_outputs.py
+
+      - name: Validate portfolio structure and outputs
+        run: python scripts/validate_outputs.py
